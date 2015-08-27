@@ -2,6 +2,10 @@ var express = require('express')
 var deeplink = require('..')
 var app = express()
 
+app.get('/', function (req, res, next) {
+ res.send("hello");
+})
+
 // mount deeplinks middleware
 app.get('/deeplink', deeplink({
   fallback: 'http://google.com',

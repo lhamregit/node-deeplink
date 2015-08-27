@@ -13,7 +13,7 @@ app.get('/deeplink', deeplink({
   ios_store_link: 'https://itunes.apple.com/us/app/cups-unlimited-coffee/id556462755?mt=8&uo=4'
 }))
 
-app.listen(3000)
+app.listen(80)
 console.log('deeplink service listening on port 3000')
 
 // now open browser and point it to http://localhost:3000/deeplink?url=cups%3A%2F%2Fmain

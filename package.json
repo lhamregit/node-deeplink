@@ -4,6 +4,7 @@
   "description": "Easily create an endpoint in your web server that redirects deep links to mobile apps",
   "main": "lib/deeplink.js",
   "scripts": {
+    "start": "node example/app.js",
     "lint": "standard",
     "test": "standard && mocha test/test.js -t 4000"
   },

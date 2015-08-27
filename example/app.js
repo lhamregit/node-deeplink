@@ -42,7 +42,7 @@ app.get('/wr1app', function (req, res, next) {
 
   // construct the new url and pass on
   var url = 'vnd.wr1.wr1://com.wr1.ios/club/'+club+'/'+posttype+'/'+post
-  var redirectUrl = 'http://localhost:3000/deeplink?url=' + url;
+  var redirectUrl = '/deeplink?url=' + url;
   console.log(redirectUrl)
   res.redirect(redirectUrl);
 })

@@ -8,7 +8,7 @@ app.get('/', function (req, res, next) {
 
 // mount deeplinks middleware
 app.get('/deeplink', deeplink({
-  fallback: 'http://google.com',
+  fallback: 'http://wr1.com',
   android_package_name: 'com.wr1',
   ios_store_link: 'https://itunes.apple.com/us/app/cups-unlimited-coffee/id556462755?mt=8&uo=4'
 }))
@@ -39,9 +39,12 @@ app.get('/wr1app', function (req, res, next) {
   var club = req.query.club;
   var posttype = req.query.posttype;
   var post = req.query.post;
-
+  // %3A :
+  // %2F /
+  //
   // construct the new url and pass on
-  var url = 'vnd.wr1.wr1://com.wr1.ios/club/'+club+'/'+posttype+'/'+post
+  var url = 'vnd.wr1.wr1%3A%2F%2com.wr1.ios%2Fclub%2F'+club+'%2F'+posttype+'%2F'+post
+  //var url = 'vnd.wr1.wr1://com.wr1.ios/club/'+club+'/'+posttype+'/'+post
   var redirectUrl = '/deeplink?url=' + url;
   console.log(redirectUrl)
   res.redirect(redirectUrl);

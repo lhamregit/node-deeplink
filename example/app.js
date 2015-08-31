@@ -9,8 +9,8 @@ app.get('/', function (req, res, next) {
 // mount deeplinks middleware
 app.get('/deeplink', deeplink({
   fallback: 'http://wr1.com',
-  android_package_name: 'com.wr1',
-  ios_store_link: 'https://itunes.apple.com/us/app/cups-unlimited-coffee/id556462755?mt=8&uo=4'
+  android_package_name: 'com.wr1'//,
+  //ios_store_link: 'https://itunes.apple.com/us/app/cups-unlimited-coffee/id556462755?mt=8&uo=4'
 }))
 
 app.listen(process.env.PORT)

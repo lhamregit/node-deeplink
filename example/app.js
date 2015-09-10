@@ -43,7 +43,7 @@ app.get('/wr1app', function (req, res, next) {
 
   //node-deeplink-dev.elasticbeanstalk.com/wr1app?club=2&posttype=artistpost&post=140
   //
-
+  console.log("wr1app");
   var club = req.query.club;
   var posttype = req.query.posttype;
   var post = req.query.post;
@@ -54,6 +54,6 @@ app.get('/wr1app', function (req, res, next) {
   var url = 'vnd%2ewr1%2ewr1%3A%2F%2Fcom%2ewr1%2eios%2Fclub%2F'+club+'%2F'+posttype+'%2F'+post
   //var url = 'vnd.wr1.wr1://com.wr1.ios/club/'+club+'/'+posttype+'/'+post
   var redirectUrl = '/deeplink?url=' + url;
-  console.log(redirectUrl)
+  console.log("redirectUrl " + redirectUrl)
   res.redirect(redirectUrl);
 })

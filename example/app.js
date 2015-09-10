@@ -2,8 +2,12 @@ var express = require('express')
 var deeplink = require('..')
 var app = express()
 
-app.get('/', function (req, res, next) {
+app.get('/test', function (req, res, next) {
  res.send("hello");
+})
+
+app.get('/', function (req, res, next) {
+  res.redirect("https://www.goyardhub.com");
 })
 
 // mount deeplinks middleware
